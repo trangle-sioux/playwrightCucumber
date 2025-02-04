@@ -3,9 +3,7 @@ const { getEnv } = require("../helper/env/env");
 const {dotenv} = require("dotenv");
 
 getEnv();
-// const client = new MongoClient(process.env.DB_CONNECT_STRING);
-
-const client = new MongoClient("mongodb+srv://db-staging:k9VrjE4fPDdXTHNI@quizrr-dev-dbs.hjfkt.mongodb.net/quizrr-staging?retryWrites=true&w=majority");
+const client = new MongoClient(process.env.DB_CONNECT_STRING);
 
 async function findADocument(databaseName, collectionName, query) {
     try {
